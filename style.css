@@ -754,24 +754,9 @@
 }
 .halloween .split-grid { position: relative; z-index: 1; }
 .halloween .feature-list li {
-  position: relative;
   border-color: rgba(120, 196, 186, 0.28);
   background: rgba(255, 255, 255, 0.04);
 }
-.halloween .feature-list li::before {
-  content: "";
-  position: absolute;
-  left: 0.42rem;
-  top: 50%;
-  width: 16px;
-  height: 16px;
-  margin-top: -8px;
-  background: var(--skull) center / contain no-repeat;
-  pointer-events: none;
-}
-.halloween .feature-list li:nth-child(2)::before { background-image: var(--skull-2); }
-.halloween .feature-list li:nth-child(3)::before { background-image: var(--skull-3); }
-.halloween .feature-list li:nth-child(4)::before { background-image: var(--bones-2); }
 
 .halloween .ps-tier {
   background: linear-gradient(135deg, var(--gold), var(--gold-2));
