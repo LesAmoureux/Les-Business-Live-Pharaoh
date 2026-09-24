@@ -501,3 +501,729 @@
       * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition: none !important; }
       
 }
+
+/* =========================================================
+   Halloween theme
+   On:     <body class="halloween">
+   Unplug: remove the halloween class from <body>
+   ========================================================= */
+.halloween {
+  --navy: #f4efe4;
+  --navy-2: #12343a;
+  --gold: #f0a05a;
+  --gold-2: #ff5d4a;
+  --sand: #071416;
+  --sand-2: #0e1e22;
+  --card: #122226;
+  --ink: #f4efe4;
+  --muted: #b7c9c6;
+  --line: rgba(120, 196, 186, 0.32);
+  --ok: #9be7c4;
+  --shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  --web-tl: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23efe6d6' stroke-opacity='0.55' stroke-width='1'><path d='M0 0L200 0M0 0L200 48M0 0L200 108M0 0L150 200M0 0L72 200M0 0L0 200'/><path d='M26 0C58 30 26 54 0 64'/><path d='M64 0C116 48 54 96 0 116'/><path d='M108 0C166 70 88 132 0 160'/><path d='M154 8C196 100 120 168 16 194'/></g></svg>");
+  --web-br: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23efe6d6' stroke-opacity='0.5' stroke-width='1'><path d='M200 200L0 200M200 200L0 152M200 200L0 92M200 200L50 0M200 200L128 0M200 200L200 0'/><path d='M174 200C142 170 174 146 200 136'/><path d='M136 200C84 152 146 104 200 84'/><path d='M92 200C34 130 112 68 200 40'/><path d='M46 192C4 100 80 32 184 6'/></g></svg>");
+  --spider: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 150'><line x1='40' y1='0' x2='40' y2='34' stroke='%23efe6d6' stroke-width='1'/><ellipse cx='40' cy='62' rx='13' ry='17' fill='%23f3ead8'/><circle cx='40' cy='46' r='9' fill='%23f3ead8'/><circle cx='36.5' cy='44.5' r='1.6' fill='%23ff4d1c'/><circle cx='43.5' cy='44.5' r='1.6' fill='%23ff4d1c'/><g fill='none' stroke='%23f3ead8' stroke-width='1.5' stroke-linecap='round'><path d='M31 50C16 40 8 30 3 20'/><path d='M29 56C12 54 5 50 1 40'/><path d='M29 64C12 74 6 90 3 104'/><path d='M33 70C18 90 14 112 12 130'/><path d='M49 50C64 40 72 30 77 20'/><path d='M51 56C68 54 75 50 79 40'/><path d='M51 64C68 74 74 90 77 104'/><path d='M47 70C62 90 66 112 68 130'/></g></svg>");
+  --skeleton: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 210'><g fill='none' stroke='%23f3ead8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><circle cx='50' cy='26' r='16'/><path d='M43 22h5M52 22h5'/><path d='M44 32c4 5 8 5 12 0'/><path d='M50 42v16'/><path d='M34 66h32M30 80h40M34 94h32M40 108h20'/><path d='M50 58v62'/><path d='M50 120l-14 48M50 120l14 48'/><path d='M36 168l-6 22M64 168l6 22'/></g><circle cx='43' cy='23' r='1.4' fill='%238dff9a'/><circle cx='57' cy='23' r='1.4' fill='%238dff9a'/></svg>");
+  --bat: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'><path fill='%23d9c6ff' d='M50 22C46 12 38 8 33 12C37 15 39 20 37 24C27 20 15 22 2 34C16 29 28 32 38 37C42 31 46 28 50 28C54 28 58 31 62 37C72 32 84 29 98 34C85 22 73 20 63 24C61 20 63 15 67 12C62 8 54 12 50 22Z'/><circle cx='44' cy='20' r='1.3' fill='%238dff9a'/><circle cx='56' cy='20' r='1.3' fill='%238dff9a'/></svg>");
+  --skull: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 76'><path fill='%23f4ecd8' d='M32 4C18 4 8 15 8 30c0 9 4 16 9 20v8c0 5 4 8 9 8h12c5 0 9-3 9-8v-8c5-4 9-11 9-20C56 15 46 4 32 4z'/><ellipse cx='23' cy='30' rx='6' ry='7' fill='%23160e22'/><ellipse cx='41' cy='30' rx='6' ry='7' fill='%23160e22'/><path fill='%23160e22' d='M29 42h6l-1 8h-4z'/><path stroke='%23160e22' stroke-width='2' d='M24 62v7M32 62v7M40 62v7'/></svg>");
+  --pumpkin: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 76'><path fill='%233f9a4a' d='M30 2h4l1 12h-6z'/><ellipse cx='32' cy='44' rx='16' ry='24' fill='%23ff7a2a'/><ellipse cx='22' cy='45' rx='9' ry='20' fill='%23e25a12'/><ellipse cx='42' cy='45' rx='9' ry='20' fill='%23ff9344'/><path fill='%23160e22' d='M24 40l6 5-6 4zM40 40l-6 5 6 4zM26 56h12l-6 6z'/></svg>");
+  --ghost: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 64'><path fill='%23f7f2ea' d='M6 30C6 16 14 6 24 6s18 10 18 24v30l-6-7-6 8-6-8-6 8-6-7z'/><circle cx='17' cy='28' r='3' fill='%23160e22'/><circle cx='31' cy='28' r='3' fill='%23160e22'/><ellipse cx='24' cy='38' rx='3' ry='4' fill='%23160e22'/></svg>");
+  --stone: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 72'><path fill='%23c3b6dc' d='M8 30C8 16 16 6 28 6s20 10 20 24v34H8z'/><path fill='%23948aaa' d='M4 60h48v8H4z'/><path stroke='%23160e22' stroke-width='2.2' stroke-linecap='round' d='M28 20v16M20 28h16'/></svg>");
+  --bones: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><g fill='%23f4ecd8'><circle cx='12' cy='12' r='6'/><circle cx='22' cy='8' r='5'/><circle cx='52' cy='52' r='6'/><circle cx='42' cy='56' r='5'/><circle cx='52' cy='12' r='6'/><circle cx='42' cy='8' r='5'/><circle cx='12' cy='52' r='6'/><circle cx='22' cy='56' r='5'/></g><g stroke='%23f4ecd8' stroke-width='7' stroke-linecap='round'><path d='M16 16L48 48'/><path d='M48 16L16 48'/></g></svg>");
+  --candle: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 68'><ellipse cx='18' cy='16' rx='5' ry='9' fill='%23ffb15a'/><path fill='%23fff6d0' d='M18 6c3 5 0 8 0 8s-3-3 0-8z'/><rect x='11' y='24' width='14' height='36' rx='2' fill='%23f4ecd8'/><rect x='11' y='24' width='14' height='5' fill='%23ff7a2a'/></svg>");
+  --moon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23f6e7b2' d='M42 6a28 28 0 1 0 16 46A22 22 0 1 1 42 6z'/></svg>");
+  --eyes: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 32'><ellipse cx='18' cy='16' rx='16' ry='11' fill='%23f7f2ea'/><ellipse cx='54' cy='16' rx='16' ry='11' fill='%23f7f2ea'/><circle cx='18' cy='16' r='6' fill='%238dff9a'/><circle cx='54' cy='16' r='6' fill='%238dff9a'/><circle cx='18' cy='16' r='2.4' fill='%23160e22'/><circle cx='54' cy='16' r='2.4' fill='%23160e22'/></svg>");
+  --eyes-snake: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 32'><ellipse cx='18' cy='16' rx='16' ry='11' fill='%23f7f2ea'/><ellipse cx='54' cy='16' rx='16' ry='11' fill='%23f7f2ea'/><ellipse cx='18' cy='16' rx='7' ry='9' fill='%238dff9a'/><ellipse cx='54' cy='16' rx='7' ry='9' fill='%238dff9a'/><rect x='16.7' y='8' width='2.6' height='16' rx='1.2' fill='%23160e22'/><rect x='52.7' y='8' width='2.6' height='16' rx='1.2' fill='%23160e22'/></svg>");
+  --fence: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 40'><g fill='%238e82a8'><rect x='8' y='10' width='8' height='30'/><rect x='38' y='10' width='8' height='30'/><rect x='68' y='10' width='8' height='30'/><rect x='98' y='10' width='8' height='30'/><polygon points='8 10 12 0 16 10'/><polygon points='38 10 42 0 46 10'/><polygon points='68 10 72 0 76 10'/><polygon points='98 10 102 0 106 10'/><rect y='18' width='120' height='5'/></g></svg>");
+  --corn: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 48'><path fill='%23fff6e4' d='M18 2l8 14H10z'/><path fill='%23ff8a3d' d='M10 16h16l5 14H5z'/><path fill='%23e8c15a' d='M5 30h26l5 16H0z'/></svg>");
+  --taffy: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 32'><path fill='%23ff8a3d' d='M4 16L18 6l6 10-6 10z'/><rect x='20' y='6' width='32' height='20' rx='6' fill='%23b388ff'/><path fill='%238dff9a' d='M52 16l16-10v20z'/><path fill='%23fff6e4' d='M32 10h4v12h-4z'/><path fill='%23ff8a3d' d='M40 10h3v12h-3z'/></svg>");
+  --pop: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 68'><circle cx='20' cy='18' r='15' fill='%23ff4d7a'/><circle cx='20' cy='18' r='9' fill='%23fff6e4'/><circle cx='20' cy='18' r='4' fill='%23ff8a3d'/><rect x='18' y='32' width='4' height='32' rx='1' fill='%23f4ecd8'/></svg>");
+  --bat-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 44'><path fill='%23140c18' stroke='%23ff8a3d' stroke-width='1' d='M50 26L40 8L28 16L12 4L20 20L2 16L14 30L6 40L30 34L40 42L50 30L60 42L70 34L94 40L86 30L98 16L80 20L88 4L72 16L60 8Z'/><circle cx='44' cy='24' r='1.5' fill='%23ff4d1c'/><circle cx='56' cy='24' r='1.5' fill='%23ff4d1c'/></svg>");
+  --bat-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 36'><ellipse cx='40' cy='20' rx='11' ry='8' fill='%236b442e'/><path fill='%233d281c' d='M30 18C12 6 2 14 2 24C16 18 24 24 32 26Z'/><path fill='%233d281c' d='M50 18C68 6 78 14 78 24C64 18 56 24 48 26Z'/><path fill='%233d281c' d='M32 14L26 2L38 14Z'/><path fill='%233d281c' d='M48 14L54 2L42 14Z'/><circle cx='36' cy='19' r='1.4' fill='%238dff9a'/><circle cx='44' cy='19' r='1.4' fill='%238dff9a'/></svg>");
+  --spider-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 70 70'><circle cx='35' cy='26' r='8' fill='%23110c10'/><ellipse cx='35' cy='42' rx='12' ry='14' fill='%23110c10'/><path fill='%23ff4d1c' d='M31 38h8l-4 10z'/><g fill='none' stroke='%23110c10' stroke-width='1.7' stroke-linecap='round'><path d='M28 30C12 18 6 12 2 8'/><path d='M26 40C10 42 4 52 0 62'/><path d='M42 30C58 18 64 12 68 8'/><path d='M44 40C60 42 66 52 70 62'/></g><circle cx='32' cy='25' r='1.4' fill='%23ff4d1c'/><circle cx='38' cy='25' r='1.4' fill='%23ff4d1c'/></svg>");
+  --spider-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 120'><line x1='40' y1='0' x2='40' y2='22' stroke='%23c9b6dc' stroke-width='1'/><ellipse cx='40' cy='46' rx='8' ry='14' fill='%23d9c6ff'/><circle cx='40' cy='32' r='7' fill='%23d9c6ff'/><circle cx='37' cy='31' r='1.3' fill='%238dff9a'/><circle cx='43' cy='31' r='1.3' fill='%238dff9a'/><g fill='none' stroke='%23d9c6ff' stroke-width='1.4' stroke-linecap='round'><path d='M34 38C16 28 8 18 2 10'/><path d='M32 48C14 52 6 66 2 82'/><path d='M34 58C18 78 14 96 16 112'/><path d='M46 38C64 28 72 18 78 10'/><path d='M48 48C66 52 74 66 78 82'/><path d='M46 58C62 78 66 96 64 112'/></g></svg>");
+  --skull-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 76'><path fill='%23efe6d4' d='M32 2C16 2 6 16 6 32c0 12 6 18 12 22v12h28V54c6-4 12-10 12-22C58 16 48 2 32 2z'/><path stroke='%23160e22' stroke-width='1.4' d='M30 8l6 14'/><ellipse cx='22' cy='30' rx='7' ry='8' fill='%23ff4d1c'/><ellipse cx='42' cy='30' rx='7' ry='8' fill='%23ff4d1c'/><path fill='%23160e22' d='M28 44h8l-2 8h-4z'/><path stroke='%23160e22' stroke-width='2' d='M22 62v8M32 60v10M42 62v8'/></svg>");
+  --skull-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 80'><path fill='%23f7f2ea' d='M32 6C20 6 12 16 12 30c0 8 4 14 8 18v16h24V48c4-4 8-10 8-18C52 16 44 6 32 6z'/><circle cx='24' cy='30' r='4' fill='%23160e22'/><circle cx='40' cy='30' r='4' fill='%23160e22'/><path fill='%23160e22' d='M29 42h6v6h-6z'/><path stroke='%23160e22' stroke-width='2' d='M22 58h6M30 58h6M38 58h6'/></svg>");
+  --pumpkin-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 78'><path fill='%232f8a40' d='M24 2h4l1 14h-6z'/><ellipse cx='26' cy='48' rx='14' ry='28' fill='%23ff7a2a'/><ellipse cx='16' cy='48' rx='7' ry='24' fill='%23e25a12'/><ellipse cx='36' cy='48' rx='7' ry='24' fill='%23ff9344'/><path fill='%23160e22' d='M18 40h6v6h-6zM28 40h6v6h-6zM20 58h12v4H20z'/></svg>");
+  --pumpkin-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 78 58'><path fill='%233f9a4a' d='M36 2h6l1 10h-8z'/><ellipse cx='39' cy='34' rx='28' ry='18' fill='%23ff9344'/><ellipse cx='22' cy='34' rx='14' ry='16' fill='%23e25a12'/><ellipse cx='56' cy='34' rx='14' ry='16' fill='%23ff7a2a'/><path fill='%23160e22' d='M24 28l8 6-8 4zM54 28l-8 6 8 4zM32 42h14l-7 6z'/></svg>");
+  --ghost-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 72'><path fill='%23e7dcff' d='M8 34C8 16 18 6 28 6s20 10 20 28v30l-5-6-5 8-5-8-5 8-5-6-5 8-5-8z'/><circle cx='20' cy='30' r='3' fill='%238dff9a'/><circle cx='36' cy='30' r='3' fill='%238dff9a'/><path fill='%23160e22' d='M24 40h8l-4 6z'/></svg>");
+  --ghost-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 48'><path fill='%23f7f2ea' d='M8 28c0-12 10-20 24-20s24 8 24 20v14l-8-6-8 8-8-8-8 8-8-6z'/><circle cx='22' cy='24' r='3' fill='%23160e22'/><circle cx='42' cy='24' r='3' fill='%23160e22'/><path stroke='%23160e22' stroke-width='1.4' d='M28 32c3 3 8 3 10 0'/></svg>");
+  --stone-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 72'><path fill='%23b7a8c9' d='M28 4L48 28v36H8V28z'/><path fill='%238e82a8' d='M4 60h48v8H4z'/><path stroke='%23160e22' stroke-width='2' d='M28 24v16M22 40h12'/></svg>");
+  --stone-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 70'><path fill='%23ddd2ef' d='M10 26c2-16 16-22 28-16 14 6 20 22 14 36-4 12-18 18-32 12C6 52 2 36 10 26z'/><path fill='%23948aaa' d='M8 58h46v8H8z'/><circle cx='26' cy='30' r='3' fill='%23160e22'/><path stroke='%23160e22' stroke-width='1.6' d='M24 40h16'/></svg>");
+  --bones-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 28'><circle cx='10' cy='10' r='6' fill='%23f4ecd8'/><circle cx='10' cy='18' r='5' fill='%23f4ecd8'/><circle cx='62' cy='10' r='6' fill='%23f4ecd8'/><circle cx='62' cy='18' r='5' fill='%23f4ecd8'/><path stroke='%23f4ecd8' stroke-width='7' stroke-linecap='round' d='M16 14H56'/></svg>");
+  --bones-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='none' stroke='%23f4ecd8' stroke-width='3' stroke-linecap='round' d='M20 14c8 6 16 6 24 0M16 28c10 8 22 8 32 0M20 44c8 6 16 6 24 0'/><path stroke='%23f4ecd8' stroke-width='3' d='M32 10v40'/></svg>");
+  --candle-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 48'><ellipse cx='20' cy='12' rx='6' ry='8' fill='%23ff8a3d'/><path fill='%23fff6d0' d='M20 4c2 4 0 6 0 6s-2-2 0-6z'/><rect x='8' y='20' width='24' height='24' rx='3' fill='%23f4ecd8'/></svg>");
+  --candle-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 72'><ellipse cx='20' cy='14' rx='5' ry='8' fill='%238dff9a'/><path fill='%23eaffd8' d='M20 4c3 5 0 8 0 8s-3-3 0-8z'/><path fill='%23f4ecd8' d='M12 26h12l4 40H8z'/><path fill='%23ffb15a' d='M14 48h8l1 8h-10z'/></svg>");
+  --moon-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='24' fill='%23f6e7b2'/><circle cx='22' cy='24' r='5' fill='%23e6d39a'/><circle cx='38' cy='36' r='7' fill='%23e6d39a'/><circle cx='40' cy='20' r='3' fill='%23e6d39a'/></svg>");
+  --moon-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='%23fff6d0' d='M24 8a26 26 0 1 1 6 48A20 20 0 1 0 24 8z'/></svg>");
+  --eyes-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 28'><path fill='%23f7f2ea' d='M4 16C10 6 26 6 32 16C26 24 10 24 4 16z'/><path fill='%23f7f2ea' d='M40 16C46 6 62 6 68 16C62 24 46 24 40 16z'/><circle cx='18' cy='16' r='4' fill='%23ff4d1c'/><circle cx='54' cy='16' r='4' fill='%23ff4d1c'/><circle cx='18' cy='16' r='1.6' fill='%23160e22'/><circle cx='54' cy='16' r='1.6' fill='%23160e22'/></svg>");
+  --eyes-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 28'><circle cx='14' cy='16' r='10' fill='%23f7f2ea'/><circle cx='42' cy='12' r='10' fill='%23f7f2ea'/><circle cx='70' cy='16' r='10' fill='%23f7f2ea'/><circle cx='14' cy='16' r='4' fill='%238dff9a'/><circle cx='42' cy='12' r='4' fill='%23ff4d1c'/><circle cx='70' cy='16' r='4' fill='%238dff9a'/><circle cx='14' cy='16' r='1.6' fill='%23160e22'/><circle cx='42' cy='12' r='1.6' fill='%23160e22'/><circle cx='70' cy='16' r='1.6' fill='%23160e22'/></svg>");
+  --eyes-scary: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92 36'><path fill='%23110810' d='M2 18C12 6 34 4 42 18C32 30 10 32 2 18z'/><path fill='%23110810' d='M50 16C60 4 82 6 90 18C80 32 58 30 50 16z'/><ellipse cx='22' cy='19' rx='8' ry='10' fill='%23c40000'/><ellipse cx='70' cy='18' rx='7' ry='9' fill='%23ff2200'/><ellipse cx='23' cy='20' rx='2.2' ry='7' fill='%23080406'/><ellipse cx='69' cy='19' rx='2' ry='6' fill='%23080406'/><path fill='%23110810' d='M6 14c10-8 24-8 32 0-12 3-22 3-32 0z'/><path fill='%23110810' d='M54 12c10-7 26-6 34 1-14 3-24 2-34-1z'/><path stroke='%23ff5a5a' stroke-width='1.2' d='M10 8l7 5M36 7l-6 6M58 7l8 4M84 9l-8 5'/></svg>");
+  --eyes-scary-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 34'><path fill='%230a0608' d='M2 18C12 8 32 6 42 18C30 26 12 26 2 18z'/><path fill='%230a0608' d='M48 15C58 6 76 8 86 17C74 26 56 24 48 15z'/><path fill='%23d6ff3a' d='M16 18c3-7 10-7 12 0-3 6-9 6-12 0z'/><path fill='%23ff2a00' d='M62 16c2-6 8-6 10 0-2 5-8 5-10 0z'/><path stroke='%23080406' stroke-width='2.4' d='M22 13v9M67 13v8'/><path fill='%230a0608' d='M8 13c8-7 22-8 30-1-12 3-20 3-30 1z'/><path fill='%230a0608' d='M50 12c8-6 24-5 32 1-12 3-22 2-32-1z'/></svg>");
+  --skeleton-2: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 160'><g fill='none' stroke='%23f4ecd8' stroke-width='3' stroke-linecap='round'><circle cx='40' cy='22' r='14'/><path d='M34 18h4M46 18h4M34 26c4 4 8 4 12 0'/><path d='M40 36v14M28 58h24M30 72h20M34 86h12'/><path d='M40 50v48M40 98l-12 36M40 98l12 36'/><path d='M22 62l-12 20M58 62l12 20'/></g><circle cx='35' cy='19' r='1.4' fill='%23ff4d1c'/><circle cx='45' cy='19' r='1.4' fill='%23ff4d1c'/></svg>");
+  --skeleton-3: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 170'><g fill='none' stroke='%23e7dcff' stroke-width='2.6' stroke-linecap='round'><circle cx='48' cy='20' r='12'/><path d='M48 32v18M36 58h24M38 72h20'/><path d='M48 50v40M48 90l-8 40M48 90l16 36'/><path d='M36 56L16 40M60 56l18 8'/></g><circle cx='44' cy='18' r='1.3' fill='%238dff9a'/><circle cx='52' cy='18' r='1.3' fill='%238dff9a'/></svg>");
+  --web-spiral: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><g fill='none' stroke='%23d9c6ff' stroke-opacity='0.6' stroke-width='1'><path d='M0 0L200 16M0 0L170 70M0 0L110 150M0 0L40 200M0 0L0 200'/><path d='M18 0C48 18 22 36 0 42'/><path d='M48 0C100 36 48 78 0 96'/><path d='M90 4C150 60 80 120 8 150'/><path d='M140 12C186 90 110 150 24 186'/></g></svg>");
+  color: var(--ink);
+  background-color: #071416;
+  background-image:
+    var(--web-tl),
+    var(--web-br),
+    radial-gradient(circle at 90% 6%, rgba(240, 160, 90, 0.16), transparent 14%),
+    radial-gradient(ellipse at 8% 0%, rgba(18, 90, 96, 0.45), transparent 46%),
+    radial-gradient(ellipse at 70% 88%, rgba(160, 40, 36, 0.14), transparent 34%),
+    linear-gradient(180deg, #0c1c20 0%, #071416 55%, #10181c 100%);
+  background-repeat: no-repeat;
+  background-position: left top, right bottom, center, center, center, center;
+  background-size: 384px 384px, 336px 336px, auto, auto, auto, auto;
+}
+
+.halloween ::selection {
+  background: #f0a05a;
+  color: #1a1008;
+}
+
+.halloween .container { position: relative; z-index: 1; }
+
+.halloween .site-header {
+  background: rgba(8, 22, 26, 0.94);
+  box-shadow: 0 10px 28px rgba(4, 20, 24, 0.45);
+}
+.halloween .site-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 228px;
+  height: 100%;
+  background: var(--web-tl) left top / 300px 300px no-repeat;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.halloween .nav-wrap { position: relative; z-index: 1; }
+
+.halloween .eyebrow::before { content: "🕷"; }
+.halloween .eyebrow::after { content: "🦴"; }
+.halloween .hero .eyebrow,
+.halloween .hero .eyebrow::before,
+.halloween .hero .eyebrow::after,
+.halloween #serve .eyebrow,
+.halloween #serve .eyebrow::before,
+.halloween #serve .eyebrow::after,
+.halloween #services .eyebrow,
+.halloween #services .eyebrow::before,
+.halloween #services .eyebrow::after,
+.halloween section[aria-labelledby="process-title"] .eyebrow,
+.halloween section[aria-labelledby="process-title"] .eyebrow::before,
+.halloween section[aria-labelledby="process-title"] .eyebrow::after,
+.halloween #packages .eyebrow,
+.halloween #packages .eyebrow::before,
+.halloween #packages .eyebrow::after,
+.halloween #project-details .eyebrow,
+.halloween #project-details .eyebrow::before,
+.halloween #project-details .eyebrow::after,
+.halloween #faq .eyebrow,
+.halloween #faq .eyebrow::before,
+.halloween #faq .eyebrow::after,
+.halloween .split-band .eyebrow,
+.halloween .split-band .eyebrow::before,
+.halloween .split-band .eyebrow::after {
+  color: #b57bff;
+}
+.halloween .hero h1,
+.halloween #value-title,
+.halloween #services .section-head h2,
+.halloween #process-title,
+.halloween #faq .section-head h2,
+.halloween .final-cta h2 {
+  color: var(--gold);
+  text-shadow: 0 0 28px rgba(240, 160, 90, 0.28);
+}
+.halloween .hero::before {
+  width: 432px;
+  height: 432px;
+  left: -96px;
+  top: -120px;
+  background:
+    var(--moon) 64% 40% / 168px 168px no-repeat,
+    radial-gradient(circle, rgba(240, 190, 120, 0.28), rgba(16, 80, 86, 0.12) 55%, transparent 72%);
+}
+
+.halloween .btn-gold {
+  color: #1a0c04;
+  box-shadow: 0 12px 28px rgba(255, 93, 74, 0.32);
+}
+.halloween .btn-ghost {
+  border-color: rgba(243, 234, 216, 0.34);
+  background: rgba(255, 255, 255, 0.04);
+}
+.halloween .btn-ghost:hover,
+.halloween .btn-ghost:focus-visible {
+  background: #ff5d4a;
+  color: #1a1008;
+}
+
+.halloween .hero-card {
+  position: relative;
+  background: linear-gradient(165deg, #16383c 0%, #0c181c 100%);
+  border-color: rgba(120, 196, 186, 0.4);
+}
+.halloween .hero-actions .btn-gold {
+  position: relative;
+}
+.halloween .hero-actions .btn-gold::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 0.75rem);
+  top: 50%;
+  width: 104px;
+  height: 46px;
+  margin-top: -23px;
+  pointer-events: none;
+  background: var(--eyes-snake) center / contain no-repeat;
+  animation: halloween-blink 5.4s ease-in-out 3.3s infinite;
+}
+@media (max-width: 759px) {
+  .halloween .site-header::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    width: 96px;
+    height: 34px;
+    background: var(--eyes-snake) center / contain no-repeat;
+    pointer-events: none;
+    z-index: 2;
+    animation: halloween-blink 6.3s ease-in-out 2.6s infinite;
+  }
+}
+.halloween .hero-logo {
+  background: #efe2c4;
+  border-color: rgba(240, 160, 90, 0.7);
+  box-shadow: 0 0 24px rgba(240, 160, 90, 0.2);
+}
+
+.halloween .checker-card,
+.halloween .alt-card,
+.halloween .detail-card,
+.halloween .timeline li,
+.halloween details,
+.halloween .package-selector {
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+.halloween .checker-card { border-color: rgba(255, 93, 74, 0.4); }
+.halloween .alt-card { border-color: rgba(120, 196, 186, 0.4); }
+.halloween .detail-card { border-color: rgba(240, 160, 90, 0.4); }
+.halloween .timeline li { border-color: rgba(155, 231, 196, 0.28); }
+.halloween .step {
+  background: rgba(240, 160, 90, 0.16);
+  color: #f0a05a;
+  box-shadow: inset 0 0 0 1px rgba(240, 160, 90, 0.4);
+}
+.halloween details[open] { border-color: rgba(240, 160, 90, 0.5); }
+
+.halloween .split-band {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #07181c 0%, #12383c 55%, #0c2428 100%);
+  border-color: rgba(240, 160, 90, 0.38);
+}
+.halloween .split-band::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 228px;
+  height: 180px;
+  background: var(--web-spiral) left top / 276px 276px no-repeat;
+  transform: scaleX(-1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.halloween .split-band::after {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  bottom: 0.45rem;
+  width: 58px;
+  height: 76px;
+  background: var(--ghost-2) center / contain no-repeat;
+  opacity: 0.7;
+  pointer-events: none;
+  animation: halloween-float 5s ease-in-out infinite;
+}
+.halloween .split-grid { position: relative; z-index: 1; }
+.halloween .feature-list li {
+  position: relative;
+  border-color: rgba(120, 196, 186, 0.28);
+  background: rgba(255, 255, 255, 0.04);
+}
+.halloween .feature-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.42rem;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  background: var(--skull) center / contain no-repeat;
+  pointer-events: none;
+}
+.halloween .feature-list li:nth-child(2)::before { background-image: var(--skull-2); }
+.halloween .feature-list li:nth-child(3)::before { background-image: var(--skull-3); }
+.halloween .feature-list li:nth-child(4)::before { background-image: var(--bones-2); }
+
+.halloween .ps-tier {
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  border-color: transparent;
+}
+.halloween .ps-tier .ps-name,
+.halloween .ps-tier .ps-price {
+  color: #1a0c04;
+}
+.halloween .ps-dot { border-color: #1a0c04; }
+.halloween #p-starter:checked ~ .ps-tiers label[for="p-starter"],
+.halloween #p-standard:checked ~ .ps-tiers label[for="p-standard"],
+.halloween #p-advanced:checked ~ .ps-tiers label[for="p-advanced"] {
+  border-color: #1a0c04;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+}
+.halloween .ps-lines li,
+.halloween .ps-addon-list li { border-bottom-color: rgba(243, 234, 216, 0.16); }
+.halloween .ps-delivery {
+  background: #163238;
+  color: var(--navy);
+}
+.halloween .ps-btn { color: #1a0c04; }
+.halloween .package-selector p a {
+  color: #f0a05a;
+  font-weight: 700;
+}
+.halloween .tag-list li {
+  background: #1a3338;
+  color: #f4efe4;
+}
+
+.halloween .final-cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #0c181c 0%, #3a221c 72%, #12282c 100%);
+  border-color: rgba(255, 138, 61, 0.45);
+}
+.halloween .final-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 216px;
+  height: 168px;
+  background: var(--web-tl) left top / 252px 252px no-repeat;
+  transform: scaleX(-1);
+  opacity: 0.5;
+  pointer-events: none;
+}
+.halloween .final-cta .btn-ghost {
+  border-color: rgba(240, 160, 90, 0.8);
+  color: #ffe3b0;
+}
+.halloween footer {
+  position: relative;
+  color: #c5d5d2;
+  padding-top: 4.6rem;
+}
+.halloween footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.35rem;
+  height: 40px;
+  background:
+    var(--stone) 2% bottom / 24px 36px no-repeat,
+    var(--stone-2) 98% bottom / 22px 32px no-repeat;
+  pointer-events: none;
+}
+.halloween footer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1rem;
+  height: 20px;
+  background: var(--fence) left center / 144px 20px repeat-x;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.halloween main > section { position: relative; }
+
+.halloween #serve::before,
+.halloween #serve::after,
+.halloween #packages::before,
+.halloween #packages::after,
+.halloween #project-details::before,
+.halloween #project-details::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #serve::before {
+  top: 0.7rem;
+  left: 1.2rem;
+  width: 120px;
+  height: 110px;
+  background: var(--web-tl) left top / 120px 120px no-repeat;
+}
+.halloween #serve::after {
+  top: 0.55rem;
+  right: 1.2rem;
+  width: 140px;
+  height: 46px;
+  background:
+    var(--bat) 0 14px / 68px 28px no-repeat,
+    var(--bat-2) 74px 0 / 54px 24px no-repeat;
+}
+.halloween #packages::before {
+  top: 0.8rem;
+  left: 1.4rem;
+  width: 32px;
+  height: 38px;
+  background: var(--pumpkin) center / contain no-repeat;
+}
+.halloween #packages::after {
+  top: 0.9rem;
+  right: 8%;
+  width: 72px;
+  height: 32px;
+  background: var(--eyes) center / contain no-repeat;
+  animation: halloween-blink 4.4s ease-in-out infinite;
+}
+.halloween #project-details::before {
+  top: 0.75rem;
+  left: 1.4rem;
+  width: 58px;
+  height: 58px;
+  background: var(--moon-2) center / contain no-repeat;
+}
+.halloween #project-details::after {
+  top: 0.4rem;
+  right: 0.6rem;
+  width: 130px;
+  height: 120px;
+  background: var(--web-br) right top / 130px 130px no-repeat;
+}
+
+.halloween main > section:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 5%;
+  width: 50px;
+  height: 66px;
+  background: var(--ghost) center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+  animation: halloween-float 4.8s ease-in-out infinite;
+}
+.halloween main > section:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  right: 7%;
+  width: 74px;
+  height: 32px;
+  background: var(--bat-3) center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #services::before {
+  content: "";
+  position: absolute;
+  top: 0.45rem;
+  left: 1.2rem;
+  width: 110px;
+  height: 100px;
+  background: var(--web-spiral) left top / 110px 110px no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #services::after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  right: 6%;
+  width: 68px;
+  height: 30px;
+  background: var(--bat) center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween main > section:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 8%;
+  right: 8%;
+  height: 64px;
+  background:
+    var(--candle) 4% 16px / 22px 46px no-repeat,
+    var(--candle-2) 47% 0 / 28px 34px no-repeat,
+    var(--candle-3) 86% 20px / 18px 40px no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #faq::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  width: 70px;
+  height: 30px;
+  margin-left: -35px;
+  background: var(--eyes-2) center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+  animation: halloween-blink 6.8s ease-in-out 1.6s infinite;
+}
+.halloween #faq::after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  left: 6%;
+  width: 64px;
+  height: 28px;
+  background: var(--bat-2) center / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #contact::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: 1.4rem;
+  width: 34px;
+  height: 50px;
+  background: var(--stone-2) center bottom / contain no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+.halloween #contact::after {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  right: 1.4rem;
+  width: 140px;
+  height: 44px;
+  background:
+    var(--bat) 0 12px / 68px 28px no-repeat,
+    var(--bat-3) 76px 0 / 50px 22px no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.halloween .checker-card::after,
+.halloween .alt-card::after,
+.halloween .detail-card::after,
+.halloween .timeline li::after,
+.halloween .faq-wrap details::after {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  width: 38px;
+  height: 38px;
+  background: var(--skull) center / contain no-repeat;
+  pointer-events: none;
+}
+.halloween .checker-card:nth-child(1)::after {
+  width: 32px;
+  height: 38px;
+  background-image: var(--pumpkin);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.halloween .checker-card:nth-child(2)::after { background-image: var(--ghost-2); }
+.halloween .checker-card:nth-child(3)::after {
+  top: 0.85rem;
+  width: 52px;
+  height: 24px;
+  background-image: var(--bat-2);
+}
+.halloween .checker-card:nth-child(4)::after {
+  width: 36px;
+  height: 36px;
+  background-image: var(--moon);
+  background-size: contain;
+}
+.halloween .alt-card:nth-child(1)::after {
+  width: 28px;
+  height: 34px;
+  background-image: var(--candle-2);
+}
+.halloween .alt-card:nth-child(2)::after { background-image: var(--skull-2); }
+.halloween .alt-card:nth-child(3)::after {
+  width: 36px;
+  height: 36px;
+  background-image: var(--spider-2);
+  background-size: contain;
+}
+.halloween .alt-card:nth-child(4)::after {
+  top: 0.85rem;
+  width: 58px;
+  height: 22px;
+  background-image: var(--eyes-2);
+  animation: halloween-blink 5.6s ease-in-out 0.7s infinite;
+}
+.halloween .detail-card:nth-child(1)::after { background-image: var(--moon-3); }
+.halloween .detail-card:nth-child(2)::after { background-image: var(--stone-2); }
+.halloween .detail-card:nth-child(3)::after { background-image: var(--skull-3); }
+.halloween .timeline li:nth-child(1)::after { background-image: var(--bones-2); width: 46px; height: 22px; top: 0.8rem; }
+.halloween .timeline li:nth-child(2)::after {
+  width: 22px;
+  height: 42px;
+  background-image: var(--candle-3);
+}
+.halloween .timeline li:nth-child(3)::after {
+  background-image: var(--ghost);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 28px;
+  height: 38px;
+  top: 0.4rem;
+}
+.halloween .faq-wrap details:nth-child(1)::after {
+  top: 0.8rem;
+  width: 62px;
+  height: 22px;
+  background-image: var(--eyes-3);
+  animation: halloween-blink 7.2s ease-in-out 2.4s infinite;
+}
+.halloween .faq-wrap details:nth-child(2)::after { background-image: var(--ghost); }
+.halloween .faq-wrap details:nth-child(3)::after {
+  top: 0.85rem;
+  width: 52px;
+  height: 24px;
+  background-image: var(--bat-3);
+}
+.halloween .faq-wrap details:nth-child(4)::after {
+  background-image: var(--pumpkin);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 32px;
+  height: 38px;
+  top: 0.45rem;
+}
+
+@media (min-width: 800px) {
+  .halloween .final-cta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 16px;
+    width: 55px;
+    height: 115px;
+    background: var(--spider-3) top center / contain no-repeat;
+    transform-origin: top center;
+    animation: halloween-dangle 5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .halloween .final-cta > * { position: relative; z-index: 2; }
+}
+
+@media (min-width: 1320px) {
+  .halloween::before {
+    content: "";
+    position: fixed;
+    top: 58px;
+    left: 12px;
+    width: 62px;
+    height: 139px;
+    background: var(--spider) top center / contain no-repeat;
+    transform-origin: top center;
+    animation: halloween-dangle 3.8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 40;
+  }
+  .halloween .hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 16px;
+    width: 62px;
+    height: 139px;
+    background: var(--spider-2) center / contain no-repeat;
+    transform-origin: top center;
+    animation: halloween-dangle 4.6s ease-in-out -2s infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+  .halloween::after {
+    content: "";
+    position: fixed;
+    right: -16px;
+    bottom: 0;
+    width: 154px;
+    height: 283px;
+    background: var(--skeleton) center bottom / contain no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 40;
+    animation: halloween-loom 5.5s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 680px) {
+  .halloween {
+    background-size: 180px 180px, 156px 156px, auto, auto, auto, auto;
+  }
+  .halloween .nav-links a {
+    border-color: rgba(120, 196, 186, 0.4);
+    background: rgba(240, 160, 90, 0.1);
+  }
+}
+
+@keyframes halloween-dangle {
+  0%, 100% { transform: rotate(-7deg); }
+  50% { transform: rotate(7deg); }
+}
+@keyframes halloween-loom {
+  0%, 100% { opacity: 0.26; }
+  50% { opacity: 0.48; }
+}
+@keyframes halloween-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(14px, -4px, 0); }
+}
+@keyframes halloween-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes halloween-flicker {
+  0%, 18%, 22%, 100% { opacity: 1; }
+  20% { opacity: 0.45; }
+  62% { opacity: 0.75; }
+}
+@keyframes halloween-blink {
+  0%, 40%, 48%, 100% { opacity: 1; }
+  44% { opacity: 0.12; }
+}
+@keyframes halloween-fly {
+  0% { transform: translate3d(-18vw, 8px, 0) scaleY(1); }
+  20% { transform: translate3d(10vw, -10px, 0) scaleY(0.68); }
+  40% { transform: translate3d(38vw, 6px, 0) scaleY(1); }
+  60% { transform: translate3d(66vw, -14px, 0) scaleY(0.66); }
+  80% { transform: translate3d(90vw, 4px, 0) scaleY(1); }
+  100% { transform: translate3d(118vw, -6px, 0) scaleY(0.72); }
+}
+@keyframes halloween-fly-back {
+  0% { transform: translate3d(112vw, 0, 0) scaleX(-1) scaleY(1); }
+  25% { transform: translate3d(72vw, -12px, 0) scaleX(-1) scaleY(0.68); }
+  50% { transform: translate3d(42vw, 8px, 0) scaleX(-1) scaleY(1); }
+  75% { transform: translate3d(12vw, -8px, 0) scaleX(-1) scaleY(0.7); }
+  100% { transform: translate3d(-22vw, 4px, 0) scaleX(-1) scaleY(1); }
+}
